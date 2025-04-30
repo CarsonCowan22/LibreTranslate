@@ -42,4 +42,4 @@ RUN if [ "$with_models" = "true" ]; then  \
   fi \
   fi
 
-ENTRYPOINT ["./venv/bin/libretranslate", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["./venv/bin/libretranslate", "--host", "0.0.0.0", "--port", "5000"]
