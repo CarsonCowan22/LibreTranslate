@@ -42,4 +42,4 @@ RUN if [ "$with_models" = "true" ]; then  \
   fi \
   fi
 
-CMD ["./venv/bin/libretranslate", "--host", "0.0.0.0", "--port", "5000"]
+CMD ["sh", "-c", "./venv/bin/libretranslate --host 0.0.0.0 --port ${PORT:-5000}"]
