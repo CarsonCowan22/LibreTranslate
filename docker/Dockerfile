@@ -42,4 +42,5 @@ RUN if [ "$with_models" = "true" ]; then  \
   fi \
   fi
 
-ENTRYPOINT ["sh", "-c", "./venv/bin/libretranslate --host 0.0.0.0 --port ${PORT:-8080}"]
+ENV PORT=8080
+CMD sh -c "./venv/bin/libretranslate --host 0.0.0.0 --port ${PORT:-8080}"
