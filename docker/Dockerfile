@@ -42,5 +42,4 @@ RUN if [ "$with_models" = "true" ]; then  \
   fi \
   fi
 
-ENV PORT=8080
-ENTRYPOINT exec ./venv/bin/libretranslate --host 0.0.0.0 --port ${PORT:-8080}
+ENTRYPOINT ["./venv/bin/libretranslate", "--host", "0.0.0.0", "--port", "8080"]
